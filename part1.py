@@ -12,3 +12,5 @@ df.fillna(0, inplace=True)
 print(df)
 group = df. groupby ('City')['Salary'].mean()
 print(group)
+
+df.to_csv('output.csv', index=False)
