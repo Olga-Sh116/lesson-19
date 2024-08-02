@@ -1,10 +1,14 @@
 import pandas as pd
 
 
-df = pd.read_csv('scraped_company_data.csv')
+'''df = pd.read_csv('scraped_company_data.csv')
 print (df.describe())
 print (df.info())
-print (df.head(5))
+print (df.head(5))'''
 
+df = pd.read_csv('dz.csv')
+df.fillna(0, inplace=True)
 
-#ps-ratio
+print(df)
+group = df. groupby ('City')['Salary'].mean()
+print(group)
